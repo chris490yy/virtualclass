@@ -4,12 +4,17 @@ var sock = io();
 
 var question = {
     'what is your favorite movie' : ['A','B','C','D']
-}
-
-sock.on('answerToTeacher', displayAnswer);
+};
 
 function displayAnswer(answer) {
-    console.log(answer);
+    console.log('Teacher Client: ' +  answer);
+    document.getElementById("result").innerHTML=answer;
 }
 
-sock.emit('questionFromTeacher', question);
+function init() {
+    sock.on('answerToTeacher', displayAnswer);
+    sock.emit('questionFromTeacher', question);
+}
+
+
+init();
