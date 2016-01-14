@@ -7,13 +7,13 @@ var question = {
 };
 
 function displayAnswer(answer) {
-    console.log('Teacher Client: ' +  answer);
+    console.log('Teacher Client: ' +  JSON.stringify(answer));
     document.getElementById("result").innerHTML=answer;
 }
 
 function init() {
-    sock.on('answerToTeacher', displayAnswer);
-    sock.emit('questionFromTeacher', question);
+    sock.on('answer', displayAnswer);
+    sock.emit('question', question);
 }
 
 

@@ -13,14 +13,14 @@ io.on('connection', (sock) => {
         console.log('user login');
     });
 
-    sock.on('questionFromTeacher', (questionJsonFile) => {
+    sock.on('question', (questionJsonFile) => {
         console.log('Teacher says', questionJsonFile);
-        io.emit('questionToStudent', questionJsonFile);
+        io.emit('question', questionJsonFile);
     });
 
-    sock.on('answerFromStudent', (answerJsonFile) => {
+    sock.on('answer', (answerJsonFile) => {
         console.log('Student says', answerJsonFile);
-        io.emit('answerToTeacher',answerJsonFile);
+        io.emit('answer',answerJsonFile);
     });
 });
 
