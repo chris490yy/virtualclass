@@ -1,0 +1,26 @@
+{
+  "name": "virtualclass",
+  "version": "0.0.1",
+  "description": "A virtual classroom platform",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server/main.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juriy/virtualclass.git"
+  },
+  "keywords": [
+    "virtual",
+    "classroom",
+    "quiz",
+    "teaching"
+  ],
+  "author": "JS Academy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juriy/virtualclass/issues"
+  },
+  "homepage": "https://github.com/Juriy/virtualclass#readme"
+}
