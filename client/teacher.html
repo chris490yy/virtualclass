@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>teacher</title>
+		
+	<head>
+	<body>
+		<form>
+			<div>
+				<lable>Question:</label>
+				<input type="text" name="question" id="question" />
+				<input type="button" value="Add Option" onclick="addOption()" />
+				<input type="button" value="Delete Option" onclick="deleteOption()" />
+
+			</div>
+			<ul id="options">
+			</ul>				
+				<input type="button" value="Submit" onclick="sendQuiz()" />
+
+		</form>
+		<div>
+			<p>Question:</p>
+			<p id="questionST"></p>
+			<p>Answer:</p>
+			<p id="answerST"></p>
+		</div>
+		<script src="/socket.io/socket.io.js"></script>
+        <script src="src/teacherClient.js"></script>
+	</body>
+</html>
