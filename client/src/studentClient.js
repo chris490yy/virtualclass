@@ -15,7 +15,8 @@ function displayQuestion(question) {
 }
 
 var answer = {
-    'what is your favorite movie' : 'A'
+    questionId : 1,
+    question : 'what is your movie'
 }
 
 sock.emit('answer', answer);
